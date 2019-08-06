@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+p.bu1 {
+    margin-left: 1000px;
+}
+p.bu2 {
+    margin-left: 1000px;
+}
+p.bu3 {
+    margin-left: 1000px;
+}
+p.bu4 {
+    margin-left: 1000px;
+}
+div.topnav{
+ margin-left: 500px;
+
+}
+.mystyle {
+    width: 100%;
+    padding: 25px;
+    background-color: coral;
+    color: white;
+    font-size: 25px;
+    box-sizing: border-box;
+}
+
+</style>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Scholar Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="startbootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="startbootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="startbootstrap/css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!-- Search button -->
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="startbootstrap/index.html"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="startbootstrap/about.html">About</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="startbootstrap/reading_list.html">Your Reading List</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('startbootstrap/img/home-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Scientometric Scholar</h1>
+              <span class="subheading">Find your research interests</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <p id="tooltip" style="position: absolute; margin: 3rem; width: 30%;"></p>
+    <div class="topnav" >
+    
+    <div class="search-container">
+    
+    <select id ="selector" class="selectpicker" >
+    <option> Click on Author or Title or Abstract </option>
+
+
+    </select>
+    <br>
+     <br>
+    
+    
+    <button id="search_button" style="visibility: hidden;" type="button" class="btn btn-primary" onclick = "fn4()">Get Result</button>
+   
+    </div>
+    </div>
+    
+    <p id="bu1" class = "bu1" ><button  type="button" class="btn btn-dark" onclick="fn1()">Author</button> <p>
+       <p id="bu2" class = "bu2" ><button type="button" class="btn btn-dark" onclick="fn2()">Title</button> <p>
+         <p id="bu3" class = "bu3" ><button type="button" class="btn btn-dark" onclick="fn3()">Abstract</button> <p>
+           <p id="bu4" class = "bu4" ><button type="button" class="btn btn-dark" onclick="location.href='What_companies.html'">See what companies and institutions are talking about</button> <p>
+    <!--<button margin-left = "150px" type="button" class="btn btn-dark">Author</button>-->
+       
+
+          <!-- Pager -->
+          <div class="clearfix">
+            <a id="bu5" class="btn btn-primary float-right" href="techstack-master/index.html">Customize your search &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <!-- Functions -->
+    <script>
+        tooltip_window = document.getElementById("tooltip");
+        function addToolTip(id, message){
+            document.getElementById(id).addEventListener("mouseover",   function(){
+                var element = document.getElementById("myDIV");
+                element.classList.add("mystyle");
+                element.innerHTML = message;
+
+            });
+            
+            document.getElementById(id).addEventListener("mouseleave",   function(){
+                tooltip_window.innerHTML = "";
+
+            });
+           
+        }
+        addToolTip("bu1","Select author name to view a co-authorship network");
+        addToolTip("bu2","Select titles in your search to view the PDF and dicussion forum");
+        addToolTip("bu3","Select keywords from abstract for popoular papers in the area");
+        addToolTip("bu4","See what companies and institutions are talking about (social media presence)");
+        addToolTip("bu5","Customize your search by domain, publisher, or tool used");
+    </script>
+    <script> 
+      function fn1()
+      {
+        document.getElementById("search_button").style.visibility="visible";
+        var myNode = document.getElementById("selector");
+        while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+        }
+        var select1 = document.getElementById("selector");
+        var opt1 = document.createElement('option');
+        opt1.value = "Kavi Mahesh";  
+        opt1.innerHTML = "Kavi Mahesh";
+        select1.appendChild(opt1);
+
+        var opt2 = document.createElement('option');
+        opt2.value = "V Vapnik";  
+        opt2.innerHTML = "V Vapnik";
+        select1.appendChild(opt2);
+
+        var opt3 = document.createElement('option');
+        opt3.value = "Robert Tibshirani";  
+        opt3.innerHTML = "Robert Tibshirani";
+        select1.appendChild(opt3);
+
+        var opt4 = document.createElement('option');
+        opt4.value = "Jitendra Malik";  
+        opt4.innerHTML = "Jitendra Malik";
+        select1.appendChild(opt4);
+      
+        var opt5 = document.createElement('option');
+        opt5.value = "Michael I Jordan";  
+        opt5.innerHTML = "Michael I Jordan";
+        select1.appendChild(opt5);
+
+        var opt6 = document.createElement('option');
+        opt6.value = "Trevor Hastie";  
+        opt6.innerHTML = "Trevor Hastie";
+        select1.appendChild(opt6);
+
+        var opt7 = document.createElement('option');
+        opt7.value = "Josh Cogan";  
+        opt7.innerHTML = "Josh Cogan";
+        select1.appendChild(opt7);
+
+
+
+
+      }
+      function fn2()
+      {
+        document.getElementById("search_button").style.visibility="visible";
+        var myNode = document.getElementById("selector");
+        while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+        }
+        var select1 = document.getElementById("selector");
+        var opt1 = document.createElement('option');
+        opt1.value = "A situated ontology for practical NLP";  
+        opt1.innerHTML = "A situated ontology for practical NLP";
+        select1.appendChild(opt1);
+
+        var opt2 = document.createElement('option');
+        opt2.value = "The Nature of Statistical Learning Theory";  
+        opt2.innerHTML = "The Nature of Statistical Learning Theory";
+        select1.appendChild(opt2);
+
+        var opt3 = document.createElement('option');
+        opt3.value = "On the uniform convergence of relative frequencies of events to their probabilities";  
+        opt3.innerHTML = "On the uniform convergence of relative frequencies of events to their probabilities";
+        select1.appendChild(opt3);
+
+      
+      }
+
+       function fn3()
+      {
+        document.getElementById("search_button").style.visibility="visible";
+        var myNode = document.getElementById("selector");
+        while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+        }
+
+        var select1 = document.getElementById("selector");
+        
+
+        var opt3 = document.createElement('option');
+        opt3.value = "HCI";  
+        opt3.innerHTML = "HCI";
+        select1.appendChild(opt3);
+
+        var opt1 = document.createElement('option');
+        opt1.value = "Statistical learning";  
+        opt1.innerHTML = "Statistical learning ";
+        select1.appendChild(opt1);
+
+        var opt2 = document.createElement('option');
+        opt2.value = "IoT";  
+        opt2.innerHTML = "IoT";
+        select1.appendChild(opt2);
+
+        var opt3 = document.createElement('option');
+        opt3.value = "Machine Learning";  
+        opt3.innerHTML = "Machine Learning";
+        select1.appendChild(opt3);
+
+        
+
+      
+      }
+
+      function fn4()
+      { //authors
+        if(document.getElementById('selector').value == "Kavi Mahesh") 
+            {
+            window.location.replace("node-focusable-d3-radial/index.html?prof=Kavi_Mahesh");
+            }
+        if(document.getElementById('selector').value == "V Vapnik") 
+            {
+            window.location.replace("node-focusable-d3-radial/index.html?prof=V_Vapnik");
+            }
+        if(document.getElementById('selector').value == "Robert Tibshirani") 
+            {
+            window.location.replace("node-focusable-d3-radial/index.html?prof=Robert_Tibshirani");
+            }
+        if(document.getElementById('selector').value == "Jitendra Malik") 
+            {
+            window.location.replace("node-focusable-d3-radial/index.html?prof=Jitendra_Malik");
+            }
+        if(document.getElementById('selector').value == "Michael I Jordan") 
+            {
+            window.location.replace("node-focusable-d3-radial/index.html?prof=Michael_I_Jordan");
+            }
+        if(document.getElementById('selector').value == "Trevor Hastie") 
+            {
+            window.location.replace("node-focusable-d3-radial/index.html?prof=Trevor_Hastie");
+            }
+        if(document.getElementById('selector').value == "Josh Cogan") 
+            {
+            window.location.replace("node-focusable-d3-radial/index.html?prof=Josh_Cogan");
+            }
+
+
+
+        //titles
+        if(document.getElementById('selector').value == "A situated ontology for practical NLP") 
+            {
+            window.location.replace("papers/paper1.html");
+            }
+        if(document.getElementById('selector').value == "The Nature of Statistical Learning Theory") 
+            {
+            window.location.replace("papers/paper2.html");
+            }
+        if(document.getElementById('selector').value == "On the uniform convergence of relative frequencies of events to their probabilities") 
+            {
+            window.location.replace("papers/paper3.html");
+            }
+
+        //abstract
+        if(document.getElementById('selector').value == "Statistical learning") 
+            {
+            window.location.replace("papers/sl-menu.html");
+            }
+        if(document.getElementById('selector').value == "IoT") 
+            {
+            window.location.replace("papers/iot-menu.html");
+            }
+        if(document.getElementById('selector').value == "Machine Learning") 
+            {
+            window.location.replace("papers/ml-menu.html");
+            }
+         if(document.getElementById('selector').value == "HCI") 
+            {
+            window.location.replace("papers/hci-menu.html");
+            }
+      }
+
+    </script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+    <script>
+      // This script is for to complete user task 1.
+      url = new URL(window.location.href);
+      if(url.searchParams.get("returnedFromCustom") != null){
+        document.getElementById("charlieSpecialTag").style.visibility="visible";
+      }
+    </script>
+    <center> <div id="myDIV">  </div> </center>
+    <center> Hover over the search options to view the functionality of each, click to generate selectable search options  </center>
+  </body>
+
+</html>

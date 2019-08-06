@@ -1,0 +1,300 @@
+function V_Vapnik(){ var treeData = [
+  {
+    "name": "V Vapnik",
+    "children": [
+      {
+        "name": "C Cortes",
+        "size": 30221,
+        "children": []
+      },
+      {
+        "name": "CJC Burges",
+        "size": 21273,
+        "children": [
+          {
+            "name": "AJ Smola",
+            "size": 4948
+          },
+          {
+            "name": "H Drucker",
+            "size": 3907
+          },
+          {
+            "name": "L Kaufman",
+            "size": 2293
+          }
+        ]
+      },
+      {
+        "name": "VN Vapnik",
+        "size": 20429,
+        "children": [
+          {
+            "name": "D Wu",
+            "size": 1614
+          },
+          {
+            "name": "O Chapelle",
+            "size": 4304
+          },
+          {
+            "name": "AY Chervonenkis",
+            "size": 3603
+          },
+          {
+            "name": "IM Guyon",
+            "size": 9404
+          },
+          {
+            "name": "P Haffner",
+            "size": 1607
+          },
+          {
+            "name": "BE Boser",
+            "size": 11090
+          },
+          {
+            "name": "H Drucker",
+            "size": 3907
+          }
+        ]
+      },
+      {
+        "name": "I Guyon",
+        "size": 18933,
+        "children": [
+          {
+            "name": "A Elisseeff",
+            "size": 11032
+          },
+          {
+            "name": "J Weston",
+            "size": 7816
+          },
+          {
+            "name": "M Nikravesh",
+            "size": 1599
+          },
+          {
+            "name": "S Gunn",
+            "size": 1599
+          },
+          {
+            "name": "LA Zadeh",
+            "size": 1599
+          },
+          {
+            "name": "S Barnhill",
+            "size": 6302
+          }
+        ]
+      },
+      {
+        "name": "BE Boser",
+        "size": 11090,
+        "children": [
+          {
+            "name": "Y LeCun",
+            "size": 6264
+          },
+          {
+            "name": "WE Hubbard",
+            "size": 1686
+          },
+          {
+            "name": "RE Howard",
+            "size": 4878
+          },
+          {
+            "name": "JS Denker",
+            "size": 4878
+          },
+          {
+            "name": "D Henderson",
+            "size": 4878
+          }
+        ]
+      },
+      {
+        "name": "A Elisseeff",
+        "size": 11032,
+        "children": []
+      },
+      {
+        "name": "IM Guyon",
+        "size": 9404,
+        "children": []
+      },
+      {
+        "name": "J Weston",
+        "size": 7816,
+        "children": [
+          {
+            "name": "C Watkins",
+            "size": 1514
+          }
+        ]
+      },
+      {
+        "name": "S Barnhill",
+        "size": 6302,
+        "children": []
+      },
+      {
+        "name": "Y LeCun",
+        "size": 6264,
+        "children": [
+          {
+            "name": "B Boser",
+            "size": 3192
+          },
+          {
+            "name": "RE Howard",
+            "size": 4878
+          },
+          {
+            "name": "W Hubbard",
+            "size": 3192
+          },
+          {
+            "name": "JS Denker",
+            "size": 4878
+          },
+          {
+            "name": "D Henderson",
+            "size": 4878
+          }
+        ]
+      },
+      {
+        "name": "AJ Smola",
+        "size": 4948,
+        "children": [
+          {
+            "name": "SE Golowich",
+            "size": 2655
+          }
+        ]
+      },
+      {
+        "name": "D Henderson",
+        "size": 4878,
+        "children": []
+      },
+      {
+        "name": "JS Denker",
+        "size": 4878,
+        "children": []
+      },
+      {
+        "name": "RE Howard",
+        "size": 4878,
+        "children": []
+      },
+      {
+        "name": "O Chapelle",
+        "size": 4304,
+        "children": [
+          {
+            "name": "S Mukherjee",
+            "size": 2697
+          },
+          {
+            "name": "O Bousquet",
+            "size": 2697
+          }
+        ]
+      },
+      {
+        "name": "H Drucker",
+        "size": 3907,
+        "children": []
+      },
+      {
+        "name": "AY Chervonenkis",
+        "size": 3603,
+        "children": []
+      },
+      {
+        "name": "W Hubbard",
+        "size": 3192,
+        "children": []
+      },
+      {
+        "name": "B Boser",
+        "size": 3192,
+        "children": []
+      },
+      {
+        "name": "O Bousquet",
+        "size": 2697,
+        "children": []
+      },
+      {
+        "name": "S Mukherjee",
+        "size": 2697,
+        "children": []
+      },
+      {
+        "name": "SE Golowich",
+        "size": 2655,
+        "children": []
+      },
+      {
+        "name": "L Kaufman",
+        "size": 2293,
+        "children": []
+      },
+      {
+        "name": "WE Hubbard",
+        "size": 1686,
+        "children": []
+      },
+      {
+        "name": "D Wu",
+        "size": 1614,
+        "children": []
+      },
+      {
+        "name": "P Haffner",
+        "size": 1607,
+        "children": []
+      },
+      {
+        "name": "LA Zadeh",
+        "size": 1599,
+        "children": []
+      },
+      {
+        "name": "S Gunn",
+        "size": 1599,
+        "children": []
+      },
+      {
+        "name": "M Nikravesh",
+        "size": 1599,
+        "children": []
+      },
+      {
+        "name": "C Watkins",
+        "size": 1514,
+        "children": []
+      },
+      {
+        "name": "HT Siegelmann",
+        "size": 1293,
+        "children": [
+          {
+            "name": "D Horn",
+            "size": 1293
+          },
+          {
+            "name": "A Ben-Hur",
+            "size": 1293
+          }
+        ]
+      }
+    ],
+    "size": 9618
+  }
+]; return treeData; }
